@@ -1,0 +1,26 @@
+class Solution {
+    static int binaryCount(int n)
+    {
+        int num = 0;
+        while(n > 0){    
+       int rem = n%2; 
+            if(rem==1)
+                num++;
+            n = n/2;    
+     }  
+        return num;
+    }
+    public int[] countBits(int n) {
+        int[] ans = new int[n+1];
+        
+        for(int i = 0;i<=n;i++)
+        {
+            int temp = binaryCount(i);
+            ans[i] = temp;
+        }
+        
+         return ans;
+     }
+    
+   
+    }
